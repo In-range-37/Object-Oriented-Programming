@@ -9,7 +9,7 @@ import java.util.Optional;
 public class ProductService {
 
 
-    private List<Product> products = new ArrayList<>();
+    //private List<Product> products = new ArrayList<>();
     private Long nextId = 1L;
 
     public List<Product> getAllProducts(){
@@ -37,5 +37,11 @@ public class ProductService {
         return products.stream()
                 .filter(p -> p.getName().contains(name))
                 .toList();
+    }
+
+    List<Product> products = new ArrayList<>();
+    public ProductService(){
+        products.add(new DigitalProduct(1L, "E-book", 9.99, "/d1/1", 4.2));
+        products.add(new PhysicalProduct(2L, "Monitor", 249.99, 5.4, "60x40"));
     }
 }
