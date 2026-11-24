@@ -27,4 +27,5 @@ public class Address {
     public String getPostcode() {
         return postcode;
     }
+
 }
