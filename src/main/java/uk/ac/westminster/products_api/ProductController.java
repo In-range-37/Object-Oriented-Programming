@@ -26,9 +26,14 @@ public class ProductController {
         return productService.addProduct(product);
     }
 
-    @GetMapping("/{id}")
-    public Product getById(@PathVariable Long id){
-        return new Product(id, "Laptop", 999.99);
+//    @GetMapping("/{id}")
+//    public Product getById(@PathVariable Long id){
+//        return new Product(id, "Laptop", 999.99);
+//    }
+
+    @GetMapping
+    public List<String>getSummaries(){
+        return productService.getAllSummaries();
     }
 
     @DeleteMapping("/products/{id}")

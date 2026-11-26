@@ -8,6 +8,13 @@ import java.util.Optional;
 @Service
 public class ProductService {
 
+    public List<String> getAllSummaries() {
+        List<String> summaries = new ArrayList<>();
+        for (Product p : products) {
+            summaries.add(p.getSummary());
+        }
+        return summaries;
+    }
 
     //private List<Product> products = new ArrayList<>();
     private Long nextId = 1L;
